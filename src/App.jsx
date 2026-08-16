@@ -45,4 +45,4 @@ function App() {
 }
 
 export default App;
-\n// Working on: Improve habit item UI with better hover effects. - 2026-08-17 04:07:00\n// Working on: Add form validation to habit input. - 2026-08-17 03:36:54
+\n// Working on: Add confirmation dialog before deleting a habit. - 2026-08-17 04:37:08\n// Working on: Improve habit item UI with better hover effects. - 2026-08-17 04:07:00\n// Working on: Add form validation to habit input. - 2026-08-17 03:36:54
