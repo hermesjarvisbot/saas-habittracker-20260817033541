@@ -1,0 +1,47 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import HabitsPage from "./pages/HabitsPage";
+import DashboardPage from "./pages/DashboardPage";
+import SettingsPage from "./pages/SettingsPage";
+import AnalyticsPage from "./pages/AnalyticsPage";
+import ExportPage from "./pages/ExportPage";
+import "./App.css";
+import { useState, useEffect } from "react";
+
+function App() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+  const toggleTheme = () => setTheme(prev => prev === "light" ? "dark" : "light");
+  return (
+    <Router>
+      <div className="app" data-theme={theme}>
+        <header className="app-header">
+          <h1>HabitTracker Pro</h1>
+          <button onClick={toggleTheme} className="theme-toggle">
+            {theme === "light" ? "🌙" : "☀️"}
+          </button>
+        </header>
+        <nav className="app-nav">
+          <a href="/dashboard" className="{window.location.pathname === '/dashboard' ? 'active' : ''}">Dashboard</a>
+          <a href="/habits" className="{window.location.pathname === '/habits' ? 'active' : ''}">Habits</a>
+          <a href="/analytics" className="{window.location.pathname === '/analytics' ? 'active' : ''}">Analytics</a>
+          <a href="/export" className="{window.location.pathname === '/export' ? 'active' : ''}">Export</a>
+          <a href="/settings" className="{window.location.pathname === '/settings' ? 'active' : ''}">Settings</a>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Navigate replace to="/dashboard" />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/habits" element={<HabitsPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/export" element={<ExportPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="*" element={<div>404</div>} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
