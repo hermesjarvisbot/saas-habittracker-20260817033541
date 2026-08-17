@@ -29,21 +29,21 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-}}
-body {{
+}
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-primary);
     transition: background var(--transition), color var(--transition);
-}}
-.app {{
+}
+.app {
     max-width: 960px;
     margin: 0 auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}}
-.app-header {{
+}
+.app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,32 +52,32 @@ body {{
     background: var(--card-bg);
     box-shadow: var(--shadow);
     z-index: 100;
-}}
-.app-header h1 {{
+}
+.app-header h1 {
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: -0.5px;
-}}
-.theme-toggle {{{{ background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 8px; border-radius: 50%; transition: transform 0.2s; }}}}
-.theme-toggle:hover {{{{ transform: scale(1.1); }}}}
-.app-nav {{
+}
+.theme-toggle { background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 8px; border-radius: 50%; transition: transform 0.2s; }
+.theme-toggle:hover { transform: scale(1.1); }
+.app-nav {
     display: flex;
     gap: 0.5rem;
     padding: 0 var(--padding);
     border-bottom: 1px solid rgba(0,0,0,0.05);
-}}
-.app-nav a {{
+}
+.app-nav a {
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 500;
     padding: 0.75rem 0;
     position: relative;
     transition: color 0.2s;
-}}
-.app-nav a:hover {{
+}
+.app-nav a:hover {
     color: var(--accent);
-}}
-.app-nav a::after {{
+}
+.app-nav a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -86,22 +86,22 @@ body {{
     width: 0;
     background: var(--accent);
     transition: width 0.3s;
-}}
-.app-nav a.active::after {{
+}
+.app-nav a.active::after {
     width: 100%;
-}}
-.app-nav a.active {{
+}
+.app-nav a.active {
     color: var(--accent);
-}}
-main {{
+}
+main {
     flex: 1;
     padding: var(--padding);
-}}
-footer {{
+}
+footer {
     text-align: center;
     font-size: 0.85rem;
     color: var(--text-secondary);
     padding: var(--padding) 0;
     border-top: 1px solid rgba(0,0,0,0.05);
     margin-top: auto;
-}}
+}
