@@ -72,5 +72,5 @@ export default function ExportPage() {
                        <button onClick={()=>handleDownload("csv")} className="btn-primary">Download CSV</button>
                      </div>
                    )
-                 );
+                 });
                };
