@@ -20,7 +20,7 @@ export default function EditHabitModal({ habit, isOpen, onClose, onSave }) {
     <motion.div
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      exit={ scale: 0.9, opacity: 0 }}
+       exit={{ scale: 0.9, opacity: 0 }}
       className="modal-backdrop"
       onClick={handleCancel}
     >
