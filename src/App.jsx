@@ -24,11 +24,11 @@ function App() {
           </button>
         </header>
         <nav className="app-nav">
-          <a href="/dashboard" className="{window.location.pathname === '/dashboard' ? 'active' : ''}">Dashboard</a>
-          <a href="/habits" className="{window.location.pathname === '/habits' ? 'active' : ''}">Habits</a>
-          <a href="/analytics" className="{window.location.pathname === '/analytics' ? 'active' : ''}">Analytics</a>
-          <a href="/export" className="{window.location.pathname === '/export' ? 'active' : ''}">Export</a>
-          <a href="/settings" className="{window.location.pathname === '/settings' ? 'active' : ''}">Settings</a>
+          <a href="/dashboard" className={window.location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</a>
+          <a href="/habits" className={window.location.pathname === '/habits' ? 'active' : ''}>Habits</a>
+          <a href="/analytics" className={window.location.pathname === '/analytics' ? 'active' : ''}>Analytics</a>
+          <a href="/export" className={window.location.pathname === '/export' ? 'active' : ''}>Export</a>
+          <a href="/settings" className={window.location.pathname === '/settings' ? 'active' : ''}>Settings</a>
         </nav>
         <Routes>
           <Route path="/" element={<Navigate replace to="/dashboard" />} />
@@ -45,4 +45,3 @@ function App() {
 }
 
 export default App;
-\n// Working on: Add data backup and restore functionality. - 2026-08-17 06:37:37\n// Working on: Show streak calendar heatmap. - 2026-08-17 06:07:30\n// Working on: Add ability to set a target frequency for habits (daily, weekly, etc.). - 2026-08-17 05:37:23\n// Working on: Implement habit editing inline (instead of modal). - 2026-08-17 05:07:16\n// Working on: Add confirmation dialog before deleting a habit. - 2026-08-17 04:37:08\n// Working on: Improve habit item UI with better hover effects. - 2026-08-17 04:07:00\n// Working on: Add form validation to habit input. - 2026-08-17 03:36:54
