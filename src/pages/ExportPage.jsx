@@ -25,7 +25,7 @@ export default function ExportPage() {
       });
     });
     const header = "Habit,Date,Created At";
-    const rowsCSV = rows.map(r=>`{r.habit},{r.date},{r.createdAt}`).join("\n");
+    const rowsCSV = rows.map(r => `${r.habit},${r.date},${r.createdAt}`).join("\n");
     setCsv(header + "\n" + rowsCSV);
   };
   const handleDownload = (type) => {
@@ -67,10 +67,11 @@ export default function ExportPage() {
       )}
       {csv && (
         <div className="export-preview">
-           <h3>CSV Preview</h3>
-                       <pre className="csv-preview">{csv.slice(0,500)}{csv.length>500?"...":""}</pre>
-                       <button onClick={()=>handleDownload("csv")} className="btn-primary">Download CSV</button>
-                     </div>
-                   )
-                 });
-               };
+          <h3>CSV Preview</h3>
+          <pre className="csv-preview">{csv.slice(0,500)}{csv.length>500?"...":""}</pre>
+          <button onClick={()=>handleDownload("csv")} className="btn-primary">Download CSV</button>
+        </div>
+      )}
+    </div>
+  );
+}

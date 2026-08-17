@@ -45,7 +45,7 @@ export const HabitsProvider = ({ children }) => {
     setHabits([]);
   };
   return (
-    <HabitsContext value={{{ habits, addHabit, toggleHabit, deleteHabit, editHabitName, clearAllHabits }}}>
+    <HabitsContext value={{ habits, addHabit, toggleHabit, deleteHabit, editHabitName, clearAllHabits }}}>
       {children}
     </HabitsContext>
   );

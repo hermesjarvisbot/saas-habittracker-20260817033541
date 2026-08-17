@@ -20,7 +20,7 @@ export default function HabitItem({ habit, onToggle, onDelete, onEditStart, edit
       <div className="habit-actions">
         <button
           onClick={()=>{ toggleHabit(habit.id, today); }
-          className={'habit-btn ' + (completedToday ? "active" : "")}
+          className={`habit-btn ${completedToday ? "active" : ""}`}
         >
           {completedToday ? "✓" : "○"}
         </button>
