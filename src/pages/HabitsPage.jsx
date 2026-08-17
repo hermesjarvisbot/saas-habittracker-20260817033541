@@ -36,7 +36,7 @@ export default function HabitsPage() {
          <button onClick={()=>{ setEditingId(null); setEditName(""); setShowEditModal(false); }} className="btn-secondary">
           Cancel Edit
         </button>
-        <button onClick={()=>{ clearAllHabits(); } className="btn-danger">
+         <button onClick={()=>{ clearAllHabits(); }} className="btn-danger">
           Clear All
         </button>
       </div>

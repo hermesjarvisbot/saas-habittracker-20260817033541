@@ -25,7 +25,7 @@ export default function SettingsPage() {
          <button onClick={()=>{ /* could add import */ }} className="btn-secondary">
           Import Data (JSON)
         </button>
-        <button onClick={()=>{ setConfirmClear(true); } className="btn-danger">
+         <button onClick={()=>{ setConfirmClear(true); }} className="btn-danger">
           Clear All Data
         </button>
         {confirmClear && (

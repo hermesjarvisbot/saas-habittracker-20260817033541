@@ -67,11 +67,9 @@ export default function ExportPage() {
       )}
       {csv && (
         <div className="export-preview">
-          <h3>CSV Preview</h3>
-          <pre className="csv-preview">{csv.slice(0,500)}{csv.length>500?"...":""}</pre>
-          <button onClick={()=>handleDownload("csv")} className="btn-primary">Download CSV</button>
-        </div>
-        })
-    </div>
-  );
+           <h3>CSV Preview</h3>
+           <pre className="csv-preview">{csv.slice(0,500)}{csv.length>500?"...":""}</pre>
+           <button onClick={()=>handleDownload("csv")} className="btn-primary">Download CSV</button>
+         </div>
+       );
 };
