@@ -45,9 +45,9 @@ export default function HabitsPage() {
         {habits.map(habit => (
           <motion.key
             key={habit.id}
-            initial={ y: 20, opacity: 0 }
-            animate={ y: 0, opacity: 1 }
-            exit={ y: -20, opacity: 0 }
+             initial={{ y: 20, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             exit={{ y: -20, opacity: 0 }}
           >
             <HabitItem
               habit={habit}

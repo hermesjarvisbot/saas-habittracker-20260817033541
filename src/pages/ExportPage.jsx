@@ -71,5 +71,5 @@ export default function ExportPage() {
            <pre className="csv-preview">{csv.slice(0,500)}{csv.length>500?"...":""}</pre>
            <button onClick={()=>handleDownload("csv")} className="btn-primary">Download CSV</button>
          </div>
-       );
+        )}
 };

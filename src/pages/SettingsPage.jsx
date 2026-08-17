@@ -31,7 +31,7 @@ export default function SettingsPage() {
         {confirmClear && (
           <div className="confirm">
             <p>Are you sure you want to delete all habits? This action cannot be undone.</p>
-            <button onClick={()=>{ clearAllHabits(); setConfirmClear(false); } className="btn-danger">
+             <button onClick={()=>{ clearAllHabits(); setConfirmClear(false); }} className="btn-danger">
               Yes, Clear All
             </button>
             <button onClick={()=>setConfirmClear(false)} className="btn-secondary">
