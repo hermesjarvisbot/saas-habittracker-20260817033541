@@ -39,7 +39,7 @@ export const HabitsProvider = ({ children }) => {
     setHabits(prev => prev.filter(h => h.id !== id));
   };
   const editHabitName = (id, newName) => {
-    setHabits(prev => prev.map(h => h.id === id ? { ...h, name: newName } : h)));
+    setHabits(prev => prev.map(h => h.id === id ? { ...h, name: newName } : h));
   };
   const clearAllHabits = () => {
     setHabits([]);

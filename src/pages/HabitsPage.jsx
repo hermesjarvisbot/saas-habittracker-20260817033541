@@ -51,7 +51,7 @@ export default function HabitsPage() {
           >
             <HabitItem
               habit={habit}
-              onToggle={(dateStr)=> /* handled via context */ }
+              onToggle={(dateStr) => { /* handled via context */ }}
               onDelete={()=>deleteHabit(habit.id)}
               onEditStart={handleEditStart}
               editingId={editingId}
