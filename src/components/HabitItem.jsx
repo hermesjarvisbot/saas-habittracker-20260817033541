@@ -9,6 +9,7 @@ export default function HabitItem({ habit, onToggle, onDelete, onEditStart, edit
   const completedToday = habit.completions.includes(today);
   const streak = calculateStreak(habit.completions);
   const isEditing = editingId === habit.id;
+
   return (
     <div className="habit-item">
       <div className="habit-info">
@@ -19,26 +20,27 @@ export default function HabitItem({ habit, onToggle, onDelete, onEditStart, edit
       </div>
       <div className="habit-actions">
         <button
-          onClick={()=>{ toggleHabit(habit.id, today); }
+          onClick={() => { toggleHabit(habit.id, today); }}
           className={`habit-btn ${completedToday ? "active" : ""}`}
         >
           {completedToday ? "✓" : "○"}
         </button>
-        <button onClick={()=>onEditStart(habit.id, habit.name)} className="btn-edit">✎</button>
+        <button onClick={() => onEditStart(habit.id, habit.name)} className="btn-edit">✎</button>
         <button onClick={onDelete} className="btn-delete">🗑</button>
       </div>
     </div>
   );
 }
+
 function calculateStreak(completions) {
   if (!completions.length) return 0;
-  const sorted = [...completions].sort((a,b)=>new Date(a)-new Date(b));
+  const sorted = [...completions].sort((a, b) => new Date(a) - new Date(b));
   let streak = 0;
   let today = new Date();
   today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-  for (let i = sorted.length-1; i >= 0; i--) {
+  for (let i = sorted.length - 1; i >= 0; i--) {
     const d = new Date(sorted[i]);
-    const diff = (today - d) / (1000*60*60*24);
+    const diff = (today - d) / (1000 * 60 * 60 * 24);
     if (diff === streak) {
       streak++;
       today = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
