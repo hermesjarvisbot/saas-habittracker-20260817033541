@@ -5,7 +5,7 @@ const HabitContext = createContext();
 
 export const useHabits = () => useContext(HabitContext);
 
-export const HabitsProvider = { children } => {
+export const HabitsProvider = ({ children }) => {
   const [habits, setHabits] = useState(() => {
     const saved = localStorage.getItem("habits");
     return saved ? JSON.parse(saved) : [];

@@ -22,7 +22,7 @@ export default function SettingsPage() {
         <p>
           Your habits are stored locally in your browser. Clearing site data will delete all habits.
         </p>
-        <button onClick={()=>{ /* could add import */ } className="btn-secondary">
+         <button onClick={()=>{ /* could add import */ }} className="btn-secondary">
           Import Data (JSON)
         </button>
         <button onClick={()=>{ setConfirmClear(true); } className="btn-danger">

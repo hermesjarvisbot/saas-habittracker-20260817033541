@@ -33,7 +33,7 @@ export default function HabitsPage() {
     <div className="page">
       <h1>My Habits</h1>
       <div className="habits-toolbar">
-        <button onClick={()=>{ setEditingId(null); setEditName(""); setShowEditModal(false); } className="btn-secondary">
+         <button onClick={()=>{ setEditingId(null); setEditName(""); setShowEditModal(false); }} className="btn-secondary">
           Cancel Edit
         </button>
         <button onClick={()=>{ clearAllHabits(); } className="btn-danger">
